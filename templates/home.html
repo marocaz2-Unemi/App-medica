@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio - Lekyam Clinic Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800">
+
+<nav class="bg-blue-100/80 sticky top-0 z-50 backdrop-blur-xl shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+      <img src="../static/img/slogan.png" alt="Lekyam Clinic Pro logo" class="p-2 bg-white rounded-xl shadow-md w-16 md:w-20 border-2 border-blue-200" />
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-wide text-blue-900 drop-shadow
+                   text-shadow-neon-blue"> Lekyam Clinic Pro
+        </h1>
+        <p class="text-base md:text-lg text-blue-400 font-light italic">Tu salud, nuestra prioridad</p>
+      </div>
+    </div>
+    <ul class="hidden md:flex space-x-4 text-lg md:text-xl font-semibold font-sans"> <li>
+        <a href="/theme/templates/home.html" class="px-5 py-2 rounded-full bg-blue-700 text-white
+                          hover:bg-yellow-400 hover:text-blue-900 transition-all duration-300
+                          shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300"> Inicio
+        </a>
+      </li>
+      <li>
+        <a href="#" class="px-5 py-2 rounded-full bg-blue-700 text-white
+                          hover:bg-yellow-400 hover:text-blue-900 transition-all duration-300
+                          shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300">  Citas
+        </a>
+      </li>
+      <li>
+        <a href="#" class="px-5 py-2 rounded-full bg-blue-700 text-white
+                          hover:bg-yellow-400 hover:text-blue-900 transition-all duration-300
+                          shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300"> Registrarse
+        </a>
+      </li>
+      <li>
+        <a href="#" class="px-5 py-2 rounded-full bg-blue-700 text-white
+                          hover:bg-yellow-400 hover:text-blue-900 transition-all duration-300
+                          shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300"> iniciar secion
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white shadow px-6 py-3 max-w-7xl mx-auto flex flex-wrap gap-4 items-center rounded-b-xl border-b-4 border-blue-400">
+  <div class="relative group">
+    <button class="font-semibold px-4 py-2 rounded-lg bg-blue-800 hover:bg-blue-900 transition">Servicios ▼</button>
+    <div class="hidden group-hover:block absolute left-0 top-full mt-1 bg-blue-900 rounded-xl shadow-lg py-2 w-64 z-50 border border-blue-600">
+      <ul class="text-sm space-y-1 px-4">
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo gastos varios</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo servicios médicos</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo exámenes</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo tipo examen</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="relative group">
+    <button class="font-semibold px-4 py-2 rounded-lg bg-blue-800 hover:bg-blue-900 transition">Modelos Generales ▼</button>
+    <div class="hidden group-hover:block absolute left-0 top-full mt-1 bg-blue-900 rounded-xl shadow-lg py-2 w-80 z-50 border border-blue-600">
+      <ul class="text-sm space-y-1 px-5">
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo doctor</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo paciente (incluida historia clínica)</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo empleados</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo citas</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo medicamentos</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo diagnóstico</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo atención médica - receta</li>
+        <li class="hover:bg-blue-700 rounded px-2 py-1 cursor-pointer transition">Modelo horarios doctor</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-7xl mx-auto">
+
+<header class="bg-gradient-to-br from-blue-100 via-white to-blue-200 rounded-3xl shadow-2xl p-6 m-6
+               border-[12px] border-transparent
+               [border-image:linear-gradient(to_right,theme(colors.blue.500),theme(colors.yellow.400),theme(colors.pink.500),theme(colors.green.400))_1]">
+    <div class="py-20 px-4 md:px-10 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-5xl font-extrabold text-blue-800 mb-6 leading-tight">
+                Bienvenido a <span class="text-yellow-400">Lekyam Clinic Pro</span>
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Gestiona pacientes, citas y más, de forma simple y eficaz.<br>
+                <span class="text-blue-600 font-semibold">¡Únete a la revolución digital en salud!</span>
+            </p>
+            <a href="#" class="inline-block bg-gradient-to-r from-blue-700 to-blue-500 text-white px-10 py-4 rounded-xl shadow-xl hover:from-blue-800 hover:to-blue-600 transition font-semibold text-lg border-2 border-blue-300">
+                Comenzar ahora
+            </a>
+            <div class="mt-4 flex justify-center md:justify-start gap-2">
+                <a href="#" class="text-blue-700 underline hover:text-yellow-400 transition">Ver demo</a>
+                <span class="text-gray-400">|</span>
+                <a href="#" class="text-blue-700 underline hover:text-yellow-400 transition">Solicitar información</a>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+            <img src="../static/img/portada2.png" alt="Portada Lekyam Clinic Pro" class="rounded-3xl shadow-2xl max-w-full h-auto w-[700px] border-4 border-blue-300 bg-white animate-pulse" />
+        </div>
+    </div>
+</header>
+
+    <section class="py-16 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">
+            Todas las funciones que necesitas en tu clínica, en un solo espacio digital
+        </h2>
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+
+            <div class="bg-white p-10 rounded-3xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 border-4 border-blue-500">
+                <div class="text-5xl mb-4 text-blue-600 animate-bounce">👩‍⚕️</div>
+                <h3 class="text-2xl font-semibold mb-3 text-blue-700">Gestión de Pacientes</h3>
+                <ul class="text-gray-700 text-left list-disc list-inside space-y-1">
+                    <li>Registro y edición de pacientes</li>
+                    <li>Historial clínico digital</li>
+                    <li>Adjuntar documentos y exámenes</li>
+                    <li>Búsqueda avanzada</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-10 rounded-3xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 border-4 border-yellow-400">
+                <div class="text-5xl mb-4 text-yellow-400 animate-bounce">📅</div>
+                <h3 class="text-2xl font-semibold mb-3 text-blue-700">Agenda Médica</h3>
+                <ul class="text-gray-700 text-left list-disc list-inside space-y-1">
+                    <li>Gestión de citas y horarios</li>
+                    <li>Recordatorios automáticos</li>
+                    <li>Asignación por doctor/especialidad</li>
+                    <li>Vista semanal y diaria</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-10 rounded-3xl shadow hover:shadow-2xl transition transform hover:-translate-y-2 border-4 border-green-400">
+                <div class="text-5xl mb-4 text-green-400 animate-bounce">💊</div>
+                <h3 class="text-2xl font-semibold mb-3 text-blue-700">Gestión Clínica</h3>
+                <ul class="text-gray-700 text-left list-disc list-inside space-y-1">
+                    <li>Recetas electrónicas</li>
+                    <li>Facturación y caja</li>
+                    <li>Control de inventario</li>
+                    <li>Reportes y análisis financiero</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+<section class="bg-white py-16 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 bg-blue-50 p-10 rounded-3xl shadow 
+               border-[12px] border-transparent
+               [border-image:linear-gradient(to_right,theme(colors.blue.500),theme(colors.yellow.400),theme(colors.pink.500),theme(colors.green.400))_1]
+               hover:border-blue-500 transition">
+        <div class="md:w-1/2 text-center md:text-left">
+            <h3 class="text-3xl font-bold text-blue-800 mb-4">Lekyam Clinic Pro</h3>
+            <p class="text-gray-700 mb-6">
+                Es un software médico capaz de integrar todas las funciones de tu clínica en un espacio digital, desde donde puedes acceder a todos tus datos. La gestión integral que necesitas en tu propio espacio privado en la nube.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow font-semibold transition">Pruébalo gratis</a>
+                <a href="#" class="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-100 px-6 py-3 rounded-xl shadow font-semibold transition">Más información</a>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+            <img src="../static/img/inversion.png" alt="Inversión Lekyam Clinic Pro" class="w-full max-w-md rounded-2xl shadow-lg border-2 border-blue-200 bg-white" />
+        </div>
+    </div>
+</section>
+
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">
+                Todas las funciones que necesitas en tu clínica, en un solo espacio digital
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-blue-200 hover:border-blue-500">
+                    <div class="text-5xl mb-4 text-blue-600">📅</div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Agendas</h3>
+                    <p class="text-gray-700 mb-4 text-center">
+                        Programa, modifica o cancela citas según la disponibilidad de cada profesional. Vistas diarias, semanales y mensuales, recordatorios automáticos por email, SMS o WhatsApp.
+                    </p>
+                    <a href="#" class="text-blue-700 font-semibold hover:underline">Saber más</a>
+                </div>
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-green-200 hover:border-green-500">
+                    <div class="text-5xl mb-4 text-green-500">🩺</div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Historiales médicos</h3>
+                    <p class="text-gray-700 mb-4 text-center">
+                        Centraliza las historias médicas de tus pacientes de forma segura y personalizada, facilitando el acceso a tu equipo.
+                    </p>
+                    <a href="#" class="text-blue-700 font-semibold hover:underline">Saber más</a>
+                </div>
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-purple-200 hover:border-purple-500">
+                    <div class="text-5xl mb-4 text-purple-500">🌐</div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Integración con Doctoralia</h3>
+                    <p class="text-gray-700 mb-4 text-center">
+                        Digitaliza la información de tu clínica, aumenta tu visibilidad y capta más pacientes formando parte del mayor portal de salud.
+                    </p>
+                    <a href="#" class="text-blue-700 font-semibold hover:underline">Saber más</a>
+                </div>
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-yellow-200 hover:border-yellow-500">
+                    <div class="text-5xl mb-4 text-yellow-500">👥</div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Gestión de usuarios</h3>
+                    <p class="text-gray-700 mb-4 text-center">
+                        Crea perfiles, define roles y permisos para que cada miembro del equipo acceda solo a lo que necesita.
+                    </p>
+                    <a href="#" class="text-blue-700 font-semibold hover:underline">Saber más</a>
+                </div>
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-pink-200 hover:border-pink-500">
+                    <div class="text-5xl mb-4 text-pink-500">💳</div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Caja y facturación</h3>
+                    <p class="text-gray-700 mb-4 text-center">
+                        Automatiza facturación, cobros, pagos y obtén informes financieros detallados para tomar mejores decisiones.
+                    </p>
+                    <a href="#" class="text-blue-700 font-semibold hover:underline">Saber más</a>
+                </div>
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-red-200 hover:border-red-400">
+                    <div class="text-5xl mb-4 text-red-400">📝</div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-700">Consentimientos informados</h3>
+                    <p class="text-gray-700 mb-4 text-center">
+                        Crea, gestiona y almacena consentimientos con plantillas personalizables y firma electrónica.
+                    </p>
+                    <a href="#" class="text-blue-700 font-semibold hover:underline">Saber más</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-yellow-200 hover:border-yellow-500">
+                    <div class="text-4xl mb-3 text-blue-600 animate-bounce">🛠️</div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-700">Producto</h3>
+                    <ul class="text-gray-700 text-left list-disc list-inside space-y-1">
+                        <li>Integración con Doctoralia</li>
+                        <li>Agendas</li>
+                        <li>Gestión de usuarios</li>
+                        <li>Historia clínica</li>
+                        <li>Caja y facturación</li>
+                        <li>Análisis financiero</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-yellow-200 hover:border-yellow-500">
+                    <div class="text-4xl mb-3 text-yellow-400 animate-bounce">🎯</div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-700">A quién nos dirigimos</h3>
+                    <ul class="text-gray-700 text-left list-disc list-inside space-y-1">
+                        <li>Dental</li>
+                        <li>Fisioterapia</li>
+                        <li>Psicología</li>
+                        <li>Franquicias</li>
+                        <li>Estética</li>
+                        <li>Todas las especialidades</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 rounded-3xl shadow p-8 flex flex-col items-center hover:shadow-2xl transition border-2 border-yellow-200 hover:border-yellow-500">
+                    <div class="text-4xl mb-3 text-green-500 animate-bounce">📚</div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-700">Recursos</h3>
+                    <ul class="text-gray-700 text-left list-disc list-inside space-y-1">
+                        <li>Precios</li>
+                        <li>Blog</li>
+                        <li>Centro de ayuda</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">
+                Qué opinan nuestros clientes
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-blue-500">
+                    <p class="text-gray-700 italic mb-4">
+                        "Lekyam Clinic Pro ha supuesto un antes y un después en la gestión de clientes en clínica y para Marketing. Ha acompañado nuestro desarrollo adaptándose a nuestras necesidades con gran eficacia. Damos las gracias a todo su equipo por la excelente labor que realizan."
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Álvaro García Cañizares</span><br>
+                        <span class="text-gray-500 text-sm">Director de Marketing - Clínicas Diego</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-yellow-400">
+                    <p class="text-gray-700 italic mb-4">
+                        "Desde que utilizamos Lekyam Clinic Pro, la rapidez en la facturación a nuestros pacientes ha mejorado muchísimo, la utilización del programa es muy sencilla y asequible para todos aquellos que la usamos diariamente, además suelen ser bastante rápidos a la hora de solucionarnos cualquier problema."
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Álvaro Iborra Marcos</span><br>
+                        <span class="text-gray-500 text-sm">Primer Podólogo del mundo premiado por la Academia Americana de Cirujanos Ortopédicos</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-green-400">
+                    <p class="text-gray-700 italic mb-4">
+                        "Es una herramienta muy práctica y muy útil, y nos ahorra muchísimo tiempo que antes consumíamos en tareas improductivas. No me explico cómo podíamos funcionar antes. ¡Ah, y funciona en Mac!"
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Alejandro Linares</span><br>
+                        <span class="text-gray-500 text-sm">Doctor - SinMásDolor</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-purple-400">
+                    <p class="text-gray-700 italic mb-4">
+                        "Con Lekyam Clinic Pro tengo toda la información de mi clínica en cualquier lugar al que vaya y a un solo clic. Muy, muy recomendable."
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Karim Muffak Granero</span><br>
+                        <span class="text-gray-500 text-sm">Cirujano - Clohed Cirujanos</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-pink-400">
+                    <p class="text-gray-700 italic mb-4">
+                        "Desde que utilizo Lekyam Clinic Pro la gestión del centro ha mejorado en eficacia y control de la agenda, historia clínica y facturación. Gran herramienta con un coste aceptable."
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Julián Casanova Ucles</span><br>
+                        <span class="text-gray-500 text-sm">Fisioterapeuta RFET y Xammar</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-red-400">
+                    <p class="text-gray-700 italic mb-4">
+                        "Es muy fácil de utilizar y cuando llamas para cualquier cosa la atención es extraordinaria. Estamos muy contentos."
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Regina Ruíz García</span><br>
+                        <span class="text-gray-500 text-sm">Dentista - Dentalmuñecar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div> <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-2">
+    <button id="chatbotToggle" class="bg-gradient-to-tr from-blue-700 to-blue-500 text-white rounded-full p-4 chatbot-shadow hover:bg-blue-800 focus:outline-none text-2xl btn-anim border-4 border-white neon-btn animate-bounce">
+        💬
+    </button>
+    <div id="chatbotBox" class="hidden mt-2 w-80 bg-white rounded-2xl chatbot-shadow border border-blue-200 fade-in glass">
+        <div class="flex items-center justify-between bg-blue-700 text-white px-4 py-2 rounded-t-2xl">
+            <span class="font-semibold">Asistente Lekyam-bot</span>
+            <button id="chatbotClose" class="text-white hover:text-blue-200 text-xl font-bold">&times;</button>
+        </div>
+        <div class="p-4 h-64 overflow-y-auto text-sm" id="chatbotMessages">
+            <div class="text-gray-500 text-center">¿En qué puedo ayudarte?</div>
+        </div>
+        <form id="chatbotForm" class="flex border-t border-blue-100">
+            <input type="text" id="chatbotInput" class="flex-1 px-3 py-2 rounded-bl-2xl focus:outline-none" placeholder="Escribe tu mensaje..." autocomplete="off" />
+            <button type="submit" class="bg-blue-700 text-white px-4 rounded-br-2xl hover:bg-blue-800">Enviar</button>
+        </form>
+    </div>
+</div>
+<script>
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotBox = document.getElementById('chatbotBox');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotForm = document.getElementById('chatbotForm');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+
+    chatbotToggle.addEventListener('click', () => {
+        chatbotBox.classList.toggle('hidden');
+    });
+    chatbotClose.addEventListener('click', () => {
+        chatbotBox.classList.add('hidden');
+    });
+    chatbotForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const msg = chatbotInput.value.trim();
+        if (!msg) return;
+        const userMsg = document.createElement('div');
+        userMsg.className = 'mb-2 text-right';
+        userMsg.innerHTML = `<span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-lg">${msg}</span>`;
+        chatbotMessages.appendChild(userMsg);
+        chatbotInput.value = '';
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        // Simulación de respuesta
+        setTimeout(() => {
+            const botMsg = document.createElement('div');
+            botMsg.className = 'mb-2 text-left';
+            botMsg.innerHTML = `<span class="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-lg">Gracias por tu mensaje. Pronto te responderemos.</span>`;
+            chatbotMessages.appendChild(botMsg);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }, 800);
+    });
+</script>
+
+<footer class="w-full bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 text-white py-10 mt-10 shadow-inner glass">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3 mb-4 md:mb-0">
+            <img src="../static/img/slogan.png" alt="Lekyam Clinic Pro logo" class="w-12 h-12 bg-white rounded-xl shadow border-2 border-blue-300" />
+            <span class="font-bold text-lg tracking-wide">Lekyam Clinic Pro</span>
+        </div>
+        <div class="flex flex-col md:flex-row gap-4 text-sm md:text-base items-center">
+            <a href="#" class="hover:underline hover:text-yellow-300 transition">Precios</a>
+            <span class="hidden md:inline">|</span>
+            <a href="#" class="hover:underline hover:text-yellow-300 transition">Blog</a>
+            <span class="hidden md:inline">|</span>
+            <a href="#" class="hover:underline hover:text-yellow-300 transition">Centro de ayuda</a>
+            <span class="hidden md:inline">|</span>
+            <a href="#" class="hover:underline hover:text-yellow-300 transition">Contacto</a>
+            <span class="hidden md:inline">|</span>
+            <a href="#" class="hover:underline hover:text-yellow-300 transition">Política de privacidad</a>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-6 border-t border-blue-500 pt-4 flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-blue-200 gap-2">
+        <div>
+            © 2023-2025 Lekyam Clinic Pro. Todos los derechos reservados.<br>
+            Desarrollado por <span class="font-semibold text-yellow-300">Lekyam Corporation</span>
+        </div>
+        <div class="text-right">
+            C/ guayas Pla 2 - Edificio B2, planta 13, 08019 ecuador, milagro<br>
+            Tel. +593 958 10 50 50
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
