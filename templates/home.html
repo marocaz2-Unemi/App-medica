@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicio - Lekyam Clinic Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Oculta la barra de desplazamiento en navegadores basados en Webkit (Chrome, Safari) */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        /* Oculta la barra de desplazamiento para Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+{% load static %}
+
+
+
+<nav class="bg-white shadow fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <img src="{% static 'img/slogan.png' %}" alt="Lekyam Clinic Pro" class="w-12 h-12 rounded-lg border border-gray-300 shadow" />
+            <div>
+                <h1 class="text-2xl font-bold text-blue-800">Lekyam Clinic Pro</h1>
+                <p class="text-sm text-gray-500 italic">Tu salud, nuestra prioridad</p>
+            </div>
+        </div>
+        <ul class="hidden md:flex space-x-4 text-sm font-medium">
+            <li><a href="{% url 'home' %}" class="text-blue-700 hover:text-yellow-500 transition">Inicio</a></li>
+            <li><a href="#" class="text-blue-700 hover:text-yellow-500 transition">Citas</a></li>
+            <li><a href="{% url 'register' %}" class="text-blue-700 hover:text-yellow-500 transition">Registrarse</a></li>
+            <li><a href="{% url 'login' %}" class="text-blue-700 hover:text-yellow-500 transition">Iniciar sesión</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="pt-20"> 
+    <nav class="bg-blue-600 shadow-md text-white py-3">
+        <div class="max-w-7xl mx-auto px-6 flex justify-start items-center space-x-2 md:space-x-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
+            <a href="#" class="px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 {% if request.resolver_match.url_name == 'pacientes' %}bg-blue-700{% endif %}">
+                Pacientes
+            </a>
+            <a href="#" class="px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 {% if request.resolver_match.url_name == 'citas' %}bg-blue-700{% endif %}">
+                Citas
+            </a>
+            <div class="relative group">
+                <button class="px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 flex items-center">
+                    Atenciones
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="absolute hidden group-hover:block bg-blue-700 text-white shadow-lg rounded-md mt-1 z-50 min-w-[150px]">
+                    <a href="#" class="block px-4 py-2 hover:bg-blue-800">Ver Atenciones</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-blue-800">Recetas</a>
+                </div>
+            </div>
+            <a href="#" class="px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 {% if request.resolver_match.url_name == 'servicios_adicionales' %}bg-blue-700{% endif %}">
+                Servicios
+            </a>
+            <a href="#" class="px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300 {% if request.resolver_match.url_name == 'medicamentos' %}bg-blue-700{% endif %}">
+                Medicamentos
+            </a>
+            <a href="#" class="px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+                Reportes
+            </a>
+            <a href="#" class="px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+                Configuración
+            </a>
+        </div>
+    </nav>
+
+
+    
+    <div class="max-w-7xl mx-auto px-6 mt-6"> <section class="bg-white p-10 rounded-xl shadow-md mb-10">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                        Bienvenido a <span class="text-blue-600">Lekyam Clinic Pro</span>
+                    </h2>
+                    <p class="text-gray-600 mb-6">
+                        Gestiona pacientes, citas y más de forma simple, eficiente y profesional.
+                    </p>
+                    <a href="#" class="inline-block bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-md shadow">Comenzar ahora</a>
+                </div>
+
+                <div class="md:w-1/2 relative overflow-hidden rounded-xl shadow h-72">
+                    <div id="carousel" class="w-full h-full relative">
+                        <img src="{% static 'img/carrusel/carrusel1.png' %}" alt="Imagen 1"
+                            class="carousel-image absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-100 bg-white" />
+                        <img src="{% static 'img/carrusel/carrusel2.png' %}" alt="Imagen 2"
+                            class="carousel-image absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 bg-white" />
+                        <img src="{% static 'img/carrusel/carrusel3.png' %}" alt="Imagen 3"
+                            class="carousel-image absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 bg-white" />
+                        <img src="{% static 'img/carrusel/carrusel4.png' %}" alt="Imagen 4"
+                            class="carousel-image absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 opacity-0 bg-white" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const images = document.querySelectorAll('.carousel-image');
+            let current = 0;
+
+            setInterval(() => {
+                images[current].classList.remove('opacity-100');
+                images[current].classList.add('opacity-0');
+
+                current = (current + 1) % images.length;
+
+                images[current].classList.remove('opacity-0');
+                images[current].classList.add('opacity-100');
+            }, 3000); // cada 3 segundos
+        </script>
+
+        
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                <div class="text-4xl mb-3 text-blue-600">👩‍⚕️</div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Gestión de Pacientes</h3>
+                <ul class="text-sm text-gray-600 list-disc list-inside">
+                    <li>Registro, edición e historial clínico</li>
+                    <li>Documentos adjuntos</li>
+                    <li>Filtros y búsqueda avanzada</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                <div class="text-4xl mb-3 text-yellow-500">📅</div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Agenda Médica</h3>
+                <ul class="text-sm text-gray-600 list-disc list-inside">
+                    <li>Gestión de citas por especialidad</li>
+                    <li>Recordatorios automáticos</li>
+                    <li>Vista calendario</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                <div class="text-4xl mb-3 text-green-500">💊</div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Atenciones y Recetas</h3>
+                <ul class="text-sm text-gray-600 list-disc list-inside">
+                    <li>Recetas electrónicas</li>
+                    <li>Facturación y servicios</li>
+                    <li>Reportes médicos</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 py-10 mb-10 bg-white rounded-xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <div class="flex items-start space-x-4">
+        <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-1">Staff de Médicos</h3>
+            <p class="text-gray-600">
+                Más de 100 especialistas en nuestra red, 
+                <a href="#" class="text-blue-600 hover:underline font-medium">» Ver Staff.</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="flex items-start space-x-4">
+        <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-1">Horarios de Atención</h3>
+            <div class="text-gray-600 grid grid-cols-2 gap-x-4">
+                <div>
+                    <p class="font-semibold text-gray-700">Lunes a Viernes</p>
+                    <p>7h00 a 17h00</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-gray-700">Sábados</p>
+                    <p>7h00 a 12h00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="bg-white p-10 rounded-xl shadow mb-10">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-4">¿Por qué usar Lekyam?</h3>
+                    <p class="text-gray-600 mb-6">Nuestro software médico integra todas las funciones esenciales para tu clínica en una sola plataforma moderna y segura.</p>
+                    <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-5 py-2 rounded shadow">Solicitar demo</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="{% static 'img/inversion.png' %}" alt="Inversión" class="rounded-xl border border-gray-200 shadow" />
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+    <section class="py-20 bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">
+                Qué opinan nuestros clientes
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-blue-500">
+                    <p class="text-gray-700 italic mb-4">
+                        "Lekyam Clinic Pro ha supuesto un antes y un después en la gestión de clientes en clínica y para Marketing. Ha acompañado nuestro desarrollo adaptándose a nuestras necesidades con gran eficacia. Damos las gracias a todo su equipo por la excelente labor que realizan."
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Álvaro García Cañizares</span><br>
+                        <span class="text-gray-500 text-sm">Director de Marketing - Clínicas Diego</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-yellow-400">
+                    <p class="text-gray-700 italic mb-4">
+                        "Desde que utilizamos Lekyam Clinic Pro, la rapidez en la facturación a nuestros pacientes ha mejorado muchísimo, la utilización del programa es muy sencilla y asequible para todos aquellos que la usamos diariamente, además suelen ser bastante rápidos a la hora de solucionarnos cualquier problema."
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Álvaro Iborra Marcos</span><br>
+                        <span class="text-gray-500 text-sm">Primer Podólogo del mundo premiado por la Academia Americana de Cirujanos Ortopédicos</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-green-400">
+                    <p class="text-gray-700 italic mb-4">
+                        "Es una herramienta muy práctica y muy útil, y nos ahorra muchísimo tiempo que antes consumíamos en tareas improductivas. No me explico cómo podíamos funcionar antes. ¡Ah, y funciona en Mac!"
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Alejandro Linares</span><br>
+                        <span class="text-gray-500 text-sm">Doctor - SinMásDolor</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow p-8 flex flex-col hover:shadow-2xl border-t-4 border-purple-400">
+                    <p class="text-gray-700 italic mb-4">
+                        "Con Lekyam Clinic Pro tengo toda la información de mi clínica en cualquier lugar al que vaya y a un solo clic. Muy, muy recomendable."
+                    </p>
+                    <div class="mt-4">
+                        <span class="font-bold text-blue-700">Karim Muffak Granero</span><br>
+                        <span class="text-gray-500 text-sm">Cirujano - Clohed Cirujanos</span>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+<footer class="bg-gray-900 text-gray-300 text-sm py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+            <h4 class="text-lg font-bold text-white mb-3">Lekyam Clinic Pro</h4>
+            <p>Tu salud, nuestra prioridad. Gestión médica integral desde un solo lugar.</p>
+        </div>
+        <div>
+            <h4 class="font-semibold text-white mb-2">Enlaces</h4>
+            <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Precios</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+                <li><a href="#" class="hover:underline">Centro de ayuda</a></li>
+                <li><a href="#" class="hover:underline">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold text-white mb-2">Contacto</h4>
+            <p>C/ guayas Pla 2 - Edificio B2, 08019 Milagro, Ecuador</p>
+            <p>Tel. +593 958 10 50 50</p>
+        </div>
+    </div>
+    <div class="text-center mt-8 border-t border-gray-700 pt-4 text-gray-500">
+        © 2023–2025 Lekyam Clinic Pro — Desarrollado por Lekyam Corporation
+    </div>
+</footer>
+
+</body>
+</html>
